@@ -1,7 +1,7 @@
 ### What is strace?
 strace is a Linux utility that traces system calls made by a program.
 - It provides details on:
-      - What system calls are invoked.
+      -- What system calls are invoked.
       - The parameters passed to each syscall.
       - The return values from these syscalls.
 
