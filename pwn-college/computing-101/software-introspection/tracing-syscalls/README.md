@@ -26,3 +26,14 @@ exit(42) = ?
 
 - `execve(...)`: Executes the given program (`your-program`).
 - `exit(42)`: Program terminates with exit code `42`.
+
+## Syscalls in Strace Output
+- **Syntax:**
+```sh
+system_call(parameter1, parameter2, ...) = return_value
+```
+
+- The output includes:
+  - **System call name** (e.g., `execve`, `exit`).
+  - **Parameters passed** (inside parentheses).
+  - **Return value** (after `=`).
