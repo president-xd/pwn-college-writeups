@@ -1,5 +1,3 @@
-# **strace and Syscall Tracing**
-
 ## **What is `strace`?**
 - `strace` is a Linux utility that traces system calls made by a program.
 - It provides details on:
@@ -37,3 +35,20 @@ system_call(parameter1, parameter2, ...) = return_value
   - **System call name** (e.g., `execve`, `exit`).
   - **Parameters passed** (inside parentheses).
   - **Return value** (after `=`).
+
+## **Challenge Task Solution**
+- Using `strace` to check the syscalls in the executable `/challenge/trace-me/`.
+```sh
+hacker@introspecting~tracing-syscalls:~$ strace /challenge/trace-me
+execve("/challenge/trace-me", ["/challenge/trace-me"], 0x7ffc9aee4220 /* 25 vars */) = 0
+alarm(32534)                            = 0
+exit(0)                                 = ?
++++ exited with 0 +++
+```
+
+- Submitting the number to `/challenge/submit-number` executable as parimeter/
+```sh
+hacker@introspecting~tracing-syscalls:~$ /challenge/submit-number 32534
+CORRECT! Here is your flag:
+pwn.college{cpapdSIJCL4Ciqt9gBNwmVopBlG.dFzN4UDL5cDMzgzW}
+```
