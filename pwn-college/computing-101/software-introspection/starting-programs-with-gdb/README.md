@@ -12,6 +12,10 @@ You start a program with the starti command:
 
 Give it a try now, and we'll configure gdb to magically extract the secret value once the program is running.
 
+---------------------------------------------------------------------------------------------
+### `starti`
+The ‘starti’ command does the equivalent of setting a temporary breakpoint at the first instruction of a program’s execution and then invoking the ‘run’ command. For programs containing an elaboration phase, the starti command will stop execution at the start of the elaboration phase.
+---------------------------------------------------------------------------------------------
 ## **Challenge Task Solution**
 - First Debugging the program
 ```sh
