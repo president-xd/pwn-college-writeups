@@ -5,7 +5,7 @@
 # mov rdi, [rax]
 .section .text
 _start:     
-    mov rdi, [rax]         ; for memory address
+    mov rdi, [rax]         # for memory address
     mov rax, 60
     syscall
 
